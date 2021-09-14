@@ -57,7 +57,7 @@
                 <div class="card-body">
                 {% for choice in question.choice_set.all %}
                     {% if choice.is_correct %}
-                            {% if choice in submission.choices.all %}
+                            {% if choice in selected_ids.choices.all %}
                                 <div class="text-success">Correct Answer: {{ choice.choice_text }}</div>
                             {% else %}
                                 <div class="text-warning">Not selected: {{ choice.choice_text }}</div>
